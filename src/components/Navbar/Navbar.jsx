@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { Search } from "../Search/Search";
 
 export const Navbar = ({ darkTheme, setDarkTheme }) => {
   return (
-    <div className="p-5 pb-5 flex flex-wrap sm:justify-between justify-center items-center border-b dark:bg-gray-700 dark:border-gray-700 border-gray-200">
+    <div className="p-5 pb-5 flex flex-wrap sm:justify-between justify-center items-center border-b dark:bg-gray-700 dark:border-gray-600 border-gray-200">
       <div className="flex justify-between items-center space-x-5 w-screen">
         <Link to="/" className="items-center align-middle">
           <p className="text-2xl text-sky-400 font-bold py-1 px-2">Surf</p>
@@ -15,6 +16,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
           {darkTheme ? "Light mode" : "Dark mode"}
         </button>
       </div>
+      <Search />
     </div>
   );
 };
